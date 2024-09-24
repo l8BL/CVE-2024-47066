@@ -1,0 +1,12 @@
+version: '3'
+services:
+  lobe-chat:
+    image: lobehub/lobe-chat:v1.19.12
+    container_name: lobe-chat
+    ports:
+      - "3210:3210"
+
+  www.internal-service:
+    build:
+      context: ./app
+    container_name: internal-service
